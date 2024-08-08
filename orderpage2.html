@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Ordering System</title>
+    <link rel="stylesheet" href="Styles/Styles.css">
+
+ 
+        <Title>HOME</Title>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" class="logo">
+            <input type="checkbox" id="menu">
+            <label for="menu">Menu</label>
+            <nav class="Navi">
+                <ul>
+                    <li><a href="index.html">Home page</a></li>
+            <li><a href="aboutus.html">About us </a></li>
+            <li class="dropdown"><a href="Products.html"><span>product</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="Dairy.html" >Dairy</a></li>
+                  <li><a href="Vegtables.html" >vegetables</a></li>
+                  <li><a href="Cosmetic.html">cosmetic</li>
+                  </li>
+               </ul>
+               <li><a href="orderpage2.html">orders </a></li>
+            <li><a href="Loyalty.html">loyalty </a></li>
+        </ul>
+        </nav>
+
+        <form class="search-form">
+            <input type="search" id="search" placeholder="Search">
+            <button type="submit">Search</button>
+         </form>
+    </header>
+        
+    <header>
+        <h1>Grocery Ordering System</h1>
+    </header>
+    
+    
+    <body>
+        <h1>Grocery Ordering</h1>
+    
+        <form id="order-form">
+            <section>
+                <h2>Fruits</h2>
+                <select id="fruits" name="fruits">
+                    <option value="apple">Apple - $3/kg</option>
+                    <option value="banana">Banana - $2/kg</option>
+                    <option value="orange">Orange - $4/kg</option>
+                    <option value="grape">Grapes - $5/kg</option>
+                    <option value="pear">Pear - $4.5/kg</option>
+                    <option value="kiwi">Kiwi - $6/kg</option>
+                </select>
+                <input type="number" id="fruit-quantity" name="fruit-quantity" placeholder="kg" min="0" step="0.1">
+                <button id="">Add Item</button>
+            </section>
+    
+            <section>
+                <h2>Vegetables</h2>
+                <select id="vegetables" name="vegetables">
+                    <option value="carrot">Carrot - $1/kg</option>
+                    <option value="broccoli">Broccoli - $2/kg</option>
+                    <option value="spinach">Spinach - $3/kg</option>
+                    <option value="potato">Potato - $0.5/kg</option>
+                    <option value="onion">Onion - $1.5/kg</option>
+                    <option value="pepper">Bell Pepper - $2.5/kg</option>
+                </select>
+                <input type="number" id="vegetable-quantity" name="vegetable-quantity" placeholder="kg" min="0" step="0.1">
+                <button id="">Add Item</button>
+            </section>
+    
+            <section>
+                <h2>Dairy Produce</h2>
+                <select id="dairy" name="dairy">
+                    <option value="milk">Milk - $1.5/L</option>
+                    <option value="cheese">Cheese - $5/200g</option>
+                    <option value="butter">Butter - $4/200g</option>
+                    <option value="yogurt">Yogurt - $2/500g</option>
+                    <option value="cream">Cream - $3/250g</option>
+                    <option value="icecream">Ice Cream - $6/500g</option>
+                </select>
+                <input type="number" id="dairy-quantity" name="dairy-quantity" placeholder="qty" min="0" step="1">
+                <button id="">Add Item</button>
+            </section>
+    
+            <section>
+                <h2>Meat and Seafood</h2>
+                <select id="meat-seafood" name="meat-seafood">
+                    <option value="chicken">Chicken - $8/kg</option>
+                    <option value="beef">Beef - $10/kg</option>
+                    <option value="salmon">Salmon - $12/kg</option>
+                    <option value="shrimp">Shrimp - $15/kg</option>
+                    <option value="fish">fish - $10/kg</option>
+                    <option value="pork">pork - $18/kg</option>
+                </select>
+                <input type="number" id="meat-seafood-quantity" name="meat-seafood-quantity" placeholder="kg" min="0" step="0.1">
+                <button id="">Add Item</button>
+            </section>
+    
+            <section>
+                <h2>Baking and Cooking Ingredients</h2>
+                <select id="baking-cooking" name="baking-cooking">
+                    <option value="flour">Flour - $2/kg</option>
+                    <option value="sugar">Sugar - $1.5/kg</option>
+                    <option value="salt">Salt - $0.5/kg</option>
+                    <option value="baking_powder">Baking Powder - $3/100g</option>
+                    <option value="vanilla">Vanilla Extract - $5/50ml</option>
+                    <option value="olive_oil">Olive Oil - $8/L</option>
+                </select>
+                <input type="number" id="baking-cooking-quantity" name="baking-cooking-quantity" placeholder="qty" min="0" step="1">
+                <button id="">Add Item</button>
+            </section>
+
+            <button type="button" id="add-to-favourites">Add to Favourites</button>
+            <button type="button" id="apply-favourites">Apply Favourites</button>
+            
+
+        </form>
+    
+        <table id="items-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Price</td>
+                    <td id="total-price">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    
+        <button id="buy-now">Buy Now</button>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
